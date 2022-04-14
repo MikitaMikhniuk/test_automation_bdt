@@ -36,10 +36,6 @@ class BaseElement:
         actions = ActionChains(self.driver)
         actions.move_to_element(self.element)
 
-    def send_keys(self, keys):
-        self.wait.until(EC.element_to_be_clickable(self.element))
-        self.element.send_keys(keys)
-
     def get_text(self):
         return self.element.text
 
