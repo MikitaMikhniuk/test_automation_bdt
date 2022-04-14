@@ -15,7 +15,8 @@ def step_impl(context, url):
 @when(u'"{header}" page is opened')
 def step_impl(context, header):
     context.main_page = MainPage()
-    context.main_page.click_on_catalog_top_bar(header)
+    context.main_page.onliner_header.click_on_catalog_top_bar(header)
+
 
 @step(u'navigate to "{menu}" -> "{submenu}" -> "{item}"')
 def step_imp(context, menu, submenu, item):
@@ -23,6 +24,7 @@ def step_imp(context, menu, submenu, item):
     context.catalog_page.navigate_to_menu(menu)
     context.catalog_page.navigate_to_submenu(submenu)
     context.catalog_page.click_on_submenu_item(item)
+
 
 @then(u'apply following filters and verify results')
 def step_impl(context):
