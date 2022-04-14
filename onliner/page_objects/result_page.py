@@ -52,7 +52,7 @@ class ResultPage(BasePage):
             ElementType.TEXTBOX, self.MIN_PRICE_INPUT)
         min_price_input.move_cursor_to_element()
         min_price_input.click()
-        min_price_input.send_keys(min_price)  # ПЕРЕНЕСТИ В ТЕКСТБОКС
+        min_price_input.send_keys(min_price)
         self.wait_for_filter_results()
 
     def set_max_price(self, max_price):
